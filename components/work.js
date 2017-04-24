@@ -20,12 +20,21 @@ const Content = styled.div`
   align-items: flex-end;
   ${props => props.rtl && 'flex-direction: row-reverse'};
 
-  > div { 
-    margin-top: 32px;
+  @media (max-width: 480px) {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    &:first-of-type {
-      flex: 0 0 25%;
-      ${props => props.rtl ? 'margin-left' : 'margin-right'}: 32px;
+  > div { 
+    margin-top: 16px;
+
+    @media (min-width: 481px) {
+      margin-top: 32px;
+
+      &:first-of-type {
+        flex: 0 0 25%;
+        ${props => props.rtl ? 'margin-left' : 'margin-right'}: 32px;
+      }
     }
   }
 `
@@ -47,6 +56,11 @@ const Description = styled.div`
 
 const Stores = styled.div`
   text-align: ${props => props.rtl ? 'left' : 'right'};
+
+
+  @media (max-width: 480px) {
+    text-align: right;
+  }
 
   a + a {
     margin-left: 16px;
