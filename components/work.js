@@ -26,7 +26,7 @@ const Content = styled.div`
   }
 
   > div { 
-    margin-top: 16px auto 0;
+    margin: 16px auto 0;
 
     @media (min-width: 481px) {
       margin-top: 32px;
