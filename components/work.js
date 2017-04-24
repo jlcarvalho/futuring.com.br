@@ -60,6 +60,10 @@ const Stores = styled.div`
 
   @media (max-width: 480px) {
     text-align: right;
+
+    a {
+      display: block;
+    }
   }
 
   a + a {
