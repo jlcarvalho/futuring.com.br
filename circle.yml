@@ -4,6 +4,8 @@ machine:
 test:
   override:
     - npm run test
+  post:
+    - npm run build
 deployment:
   master:
     branch: master
