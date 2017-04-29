@@ -29,7 +29,7 @@ const Content = styled.div`
     margin: 16px auto 0;
 
     @media (min-width: 481px) {
-      margin-top: 32px;
+      margin: 32px auto 0;
 
       &:first-of-type {
         flex: 0 0 25%;

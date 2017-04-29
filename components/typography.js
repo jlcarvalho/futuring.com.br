@@ -18,13 +18,14 @@ export const GradientText = styled.span`
   position: relative;
   
   &:after {
+    bottom: 0;
     content: '';
     display: block;
     width: 100%;
     height: 1px;
     position: absolute;
     left: 0;
-    transform: translateY(1.5vw);
+    transform: translateY(1vw);
     z-index: 1;
 
     ${backgroundGradient}
