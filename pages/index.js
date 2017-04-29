@@ -123,7 +123,7 @@ export default class extends React.Component {
         </Section>
         <Footer>
           <Container>
-            <p>Copyright © Futuring Ltd, 2017</p>
+            <p>Copyright © Futuring 2017</p>
           </Container>
         </Footer>
       </div>
