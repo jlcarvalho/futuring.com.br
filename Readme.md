@@ -1,23 +1,33 @@
-# Next.js Starter
+# Futuring.com.br site
+[![CircleCI](https://circleci.com/gh/Futuring/futuring.com.br.svg?style=svg)](https://circleci.com/gh/Futuring/futuring.com.br)
 
-This project uses [Next.js](https://github.com/zeit/next.js), Jest, Enzyme, Babel and Yarn.
+This is the Futuring site, you can see the live site on https://futuring.com.br.
 
-## Installation
+This project uses [Next.js](https://github.com/zeit/next.js), React, Styled Components, Polished, Jest, Enzyme, Babel and Yarn.
 
-    $ yarn install
+## Dependencies
 
-## Running the app
+To run this project you need to have:
 
-    $ yarn run dev
+* Node.js v7.9.x - You can use [NVM](https://github.com/creationix/nvm)
+* Yarn - `$ brew install yarn`
 
-## Thest the app
+## Setup the project
 
-    $ yarn test
+* `$ git clone https://github.com/Futuring/futuring.com.br` - Clone the project
+* `$ cd futuring.com.br` - Go into the project's folder
+* `$ yarn install` - Installs the project's dependencies
+* `$ yarn run dev` - Run the development server
 
-### Genereate test snapshot
+## Test the app
 
-    $ yarn test -- -u
+* `$ yarn test`
+
+### Generate test snapshot
+
+* `$ yarn test -- -u`
 
 ## Running in production
 
-    $ yarn start
+* `$ yarn run build`
+* `$ yarn start`
