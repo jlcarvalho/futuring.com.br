@@ -1,4 +1,4 @@
-npm i -g now@4.7.0
+npm i -g now
 URL=$(now deploy -t $ZEIT_TOKEN -e NODE_ENV=production)
 echo "running simple check on $URL"
 curl --silent -i -L $URL
