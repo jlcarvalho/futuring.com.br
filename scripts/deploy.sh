@@ -1,2 +1,2 @@
 npm i -g now
-URL=$(now -t $ZEIT_TOKEN)
+now -t $ZEIT_TOKEN
