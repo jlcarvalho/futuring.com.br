@@ -4,8 +4,13 @@ machine:
 test:
   override:
     - npm run test
+    - sh scripts/deploy.sh
 deployment:
-  master:
+  production:
     branch: master
     commands:
-      - sh deploy.sh
+      - sh scripts/production.sh
+  staging:
+    branch: development
+    commands:
+      - sh scripts/staging.sh
