@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 
 const Logo = styled.svg`
-  max-width: 200px;
-  min-width: 128px;
-  height: auto;
+  height: 128px;
   padding: 16px;
+  width: auto;
 `
 
 export default () => (
