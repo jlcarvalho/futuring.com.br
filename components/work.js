@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { backgroundGradient } from './styles'
-import Tag from './tag';
+import Tag from './tag'
 
 const Work = styled.div`
   margin: 32px 0;

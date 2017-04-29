@@ -34,10 +34,7 @@ export default class extends React.Component {
     return (
       <Menu {...props}>
         <ul>
-          {/*<li><Link href='#'>About</Link></li>*/}
           <li><Link onClick={() => this.handleClick('#work')}>Work</Link></li>
-          {/*<li><Link href='#'>Services</Link></li>*/}
-          {/*<li><Link href='#'>Courses</Link></li>*/}
           <li><Link onClick={() => this.handleClick('#hire')}>Hire Us</Link></li>
         </ul>
       </Menu>
