@@ -5,22 +5,54 @@ import { shallow } from 'enzyme'
 import renderer from 'react-test-renderer'
 import App from '../pages/index.js'
 
-const photos = new Array(15).fill(0).map((v, k) => k + 1);
-const url = { pathname: '/', query: {} };
+const works = [{
+  title: 'Meu Negócio',
+  image: '../static/images/home-suave.png',
+  description: `
+    <p>The <b>Meu Negócio</b> application is an virtual assistant that provides Independent Beauty Consultants of Suave Fragrance the opportunity to create sales tickets, manage inventory and service her customers on the go from their mobile devices.</p>
+  `,
+  tags: ['Ionic', 'Angular', 'CouchDB', 'PouchDB', 'Node.js', 'now.sh'],
+  stores: {
+    apple: 'https://itunes.apple.com/us/app/suave-fragrance-meu-negócio/id1225991362',
+    google: 'https://play.google.com/store/apps/details?id=br.com.futuring.apps.suave'
+  }
+}, {
+  title: 'Mini Receitas',
+  image: '../static/images/home-minireceitas.png',
+  description: `
+    <p><b>Mini Receitas</b> is an application that allows you to search for recipes through the ingredients that you have at hand. With thousands of possible combinations of filters.</p>
+  `,
+  tags: ['Ionic', 'Angular', 'CouchDB', 'PouchDB', 'Firebase'],
+  stores: {
+    google: 'https://play.google.com/store/apps/details?id=br.com.jeanlucas.apps.microreceitas'
+  }
+}, {
+  title: 'Plan Kids',
+  image: '../static/images/home-plankids.png',
+  description: `
+    <p><b>Plan Kids</b> is an application for parents who wish to develop their children\'s potential through playful play that has been designed using psychopedagogy and coaching.</p>
+  `,
+  tags: ['Ionic', 'Angular', 'Parse Server', 'PouchDB', 'Docker', 'Heroku'],
+  stores: {
+    apple: 'https://itunes.apple.com/ca/app/plan-kids/id1147019060',
+    google: 'https://play.google.com/store/apps/details?id=br.com.futuring.apps.plankidsapp'
+  }
+}]
+const url = { pathname: '/', query: {} }
 
 describe('With Enzyme', () => {
-  it('App have 15 photos', () => {
+  it('App have 3 works', () => {
     const app = shallow(
-      <App photos={photos} url={url}/>
+      <App works={works} url={url} />
     )
 
-    expect(app.find('.photo').length).toBe(15);
+    expect(app.find('.work').length).toBe(3)
   })
 })
 
 describe('With Snapshot Testing', () => {
-  it('App have 15 photos', () => {
-    const component = renderer.create(<App photos={photos} url={url}/>)
+  it('App have 3 works', () => {
+    const component = renderer.create(<App works={works} url={url} />)
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
   })
