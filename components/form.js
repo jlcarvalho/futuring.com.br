@@ -10,6 +10,7 @@ const InputWrapper = styled.div`
     background: transparent;
     border: 0;
     border-bottom: 1px solid white;
+    box-shadow: none;
     color: white;
     font-size: 1.6rem;
     margin: 8px 0;
