@@ -1,0 +1,11 @@
+machine:
+  node:
+    version: 7.9.0
+test:
+  override:
+    - npm run test
+deployment:
+  staging:
+    branch: master
+    commands:
+      - sh deploy.sh
