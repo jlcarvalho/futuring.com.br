@@ -23,6 +23,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "jest-cli": "^18.0.0",
+    "pre-commit": "^1.2.2",
     "react-addons-test-utils": "^15.3.2",
     "react-test-renderer": "^15.4.1",
     "standard": "8.4.0"
@@ -37,6 +38,10 @@
     "lint": "standard",
     "test": "jest"
   },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
   "jest": {
     "testPathIgnorePatterns": [
       "/node_modules/",
