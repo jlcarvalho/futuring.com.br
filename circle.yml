@@ -5,7 +5,11 @@ test:
   override:
     - npm run test
 deployment:
-  master:
+  production:
     branch: master
     commands:
       - sh deploy.sh
+  staging:
+    branch: development
+    commands:
+      - sh staging.sh
