@@ -99,7 +99,7 @@ export default (props) => (
         }
         <Description dangerouslySetInnerHTML={{ __html: props.description }} />
         {
-          (props.stores.apple || props.stores.google) && (
+          props.stores && (props.stores.apple || props.stores.google) && (
             <Stores {...props}>
               {
                 props.stores.apple && (

@@ -78,6 +78,13 @@ export default class extends React.Component {
           apple: 'https://itunes.apple.com/ca/app/plan-kids/id1147019060',
           google: 'https://play.google.com/store/apps/details?id=br.com.futuring.apps.plankidsapp'
         }
+      }, {
+        title: 'Prepara ENEM App',
+        image: '../static/images/home-preparaenem.png',
+        description: `
+          <p><b>Prepara ENEM</b> is an application that helps Brazilian high school students to achieve better results on Brazilian national exam through gamification.</p>
+        `,
+        tags: ['Ionic', 'Angular', 'Stamplay', 'PouchDB']
       }]
     }
   }
