@@ -98,7 +98,6 @@ export default class extends React.Component {
               <Logo />
               <Menu />
             </Header>
-
             <Main>
               <HugeText>
                 We deliver digital <GradientText>experiences</GradientText>.
