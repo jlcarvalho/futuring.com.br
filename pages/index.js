@@ -120,7 +120,7 @@ export default class extends React.Component {
           <Container small>
             <h2>Hire Us</h2>
             <HR />
-            <form action='https://formspree.io/contato@futuring.com.br' method='POST'>
+            <form action="https://formsquash.io/f/SPC9HcXT45IEMlhMeY1Y" method="POST">
               <Input required type='text' name='name' id='name' placeholder='Name' />
               <Input required type='email' name='email' id='email' placeholder='Email' />
               <TextArea required name='project' id='project' placeholder='Tell us about your awesome project!' />
