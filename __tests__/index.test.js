@@ -1,7 +1,6 @@
 /* global it, expect, describe */
 
 import React from 'react'
-import { shallow } from 'enzyme'
 import renderer from 'react-test-renderer'
 import App from '../pages/index.js'
 
@@ -30,7 +29,7 @@ const works = [{
   title: 'Plan Kids',
   image: '../static/images/home-plankids.png',
   description: `
-    <p><b>Plan Kids</b> is an application for parents who wish to develop their children\'s potential through playful play that has been designed using psychopedagogy and coaching.</p>
+    <p><b>Plan Kids</b> is an application for parents who wish to develop their children's potential through playful play that has been designed using psychopedagogy and coaching.</p>
   `,
   tags: ['Ionic', 'Angular', 'Parse Server', 'PouchDB', 'Docker', 'Heroku'],
   stores: {
@@ -39,16 +38,6 @@ const works = [{
   }
 }]
 const url = { pathname: '/', query: {} }
-
-describe('With Enzyme', () => {
-  it('App have 3 works', () => {
-    const app = shallow(
-      <App works={works} url={url} />
-    )
-
-    expect(app.find('.work').length).toBe(3)
-  })
-})
 
 describe('With Snapshot Testing', () => {
   it('App have 3 works', () => {

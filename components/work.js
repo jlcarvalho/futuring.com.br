@@ -84,7 +84,8 @@ export default (props) => (
     <Content {...props}>
       <div>
         <MockUp
-          src={props.image}
+          data-fs-src={props.image}
+          data-fs-auto-webp='true'
           alt={props.title}
         />
       </div>
@@ -105,7 +106,7 @@ export default (props) => (
                 props.stores.apple && (
                   <a href={props.stores.apple} target='_blank'>
                     <Badge
-                      src='../static/images/app-store-badge.svg'
+                      src='https://futuring.com.br/static/images/app-store-badge.svg'
                       alt='Download on the App Store'
                     />
                   </a>
@@ -115,7 +116,8 @@ export default (props) => (
                 props.stores.google && (
                   <a href={props.stores.google} target='_blank'>
                     <Badge
-                      src='../static/images/google-play-badge.png'
+                      data-fs-src='https://futuring.com.br/static/images/google-play-badge.png'
+                      data-fs-auto-webp='true'
                       alt='Get it on Google Play'
                     />
                   </a>

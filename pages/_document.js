@@ -1,18 +1,19 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-import { injectGlobal } from 'styled-components'
-import styleSheet from 'styled-components/lib/models/StyleSheet'
+import { injectGlobal, ServerStyleSheet } from 'styled-components'
 import { Global } from '../components/styles'
 
-injectGlobal(Global)
+const GA_TRACKING_ID = 'UA-36868130-1'
+
+injectGlobal`
+  ${Global}
+`
 
 export default class MyDocument extends Document {
-  static async getInitialProps ({ renderPage }) {
-    const page = renderPage()
-    const style = styleSheet.rules().map(rule => rule.cssText).join('\n')
-    return { ...page, style }
-  }
-
   render () {
+    const sheet = new ServerStyleSheet()
+    const main = sheet.collectStyles(<Main />)
+    const styleTags = sheet.getStyleElement()
+
     return (
       <html>
         <Head>
@@ -29,12 +30,23 @@ export default class MyDocument extends Document {
           <meta property='og:image:type' content='image/png' />
           <meta property='og:image:width' content='1200' />
           <meta property='og:image:height' content='900' />
-
-          <style dangerouslySetInnerHTML={{ __html: this.props.style }} />
+          {styleTags}
         </Head>
         <body>
-          <Main />
+          <div className='root'>
+            {main}
+          </div>
           <NextScript />
+          {process.env.NODE_ENV === 'production' && [
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />,
+            <script dangerouslySetInnerHTML={{ __html: ` window.dataLayer = window.dataLayer || [] function gtag(){dataLayer.push(arguments);} gtag('js', new Date()) gtag('config', '${GA_TRACKING_ID}') ` }} />
+          ]}
+          <script dangerouslySetInnerHTML={{__html: `
+            var filesquashConfig = {
+              projectId: '572043a6'
+            }
+          `}} />
+          <script src='https://unpkg.com/filesquash-widget@0.5.3/dist/filesquash.js' />
         </body>
       </html>
     )

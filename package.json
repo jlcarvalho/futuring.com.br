@@ -2,31 +2,40 @@
   "name": "futuring",
   "private": true,
   "dependencies": {
-    "next": "^6.0.3",
-    "polished": "^1.0.3",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "smoothscroll-polyfill": "^0.4.3",
+    "next": "6.0.3",
+    "polished": "1.0.3",
+    "react": "16.3.2",
+    "react-dom": "16.3.2",
+    "smoothscroll-polyfill": "0.4.3",
     "styled-components": "3.2.6"
   },
   "devDependencies": {
-    "babel-eslint": "8.2.3",
+    "@babel/core": "7.0.0-beta.54",
+    "@babel/plugin-proposal-decorators": "^7.0.0-beta.55",
+    "@babel/plugin-syntax-dynamic-import": "7.0.0-beta.54",
+    "@babel/plugin-syntax-import-meta": "7.0.0-beta.54",
+    "@babel/preset-env": "7.0.0-beta.54",
+    "@babel/preset-react": "7.0.0-beta.54",
+    "babel-eslint": "8.2.6",
     "babel-jest": "^22.4.3",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-react": "^6.16.0",
-    "babel-preset-stage-0": "^6.16.0",
-    "babel-preset-stage-1": "^6.16.0",
-    "circle-github-bot": "^0.4.0",
-    "enzyme": "^3.3.0",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "jest-cli": "^22.4.3",
-    "pre-commit": "^1.2.2",
-    "react-addons-test-utils": "^15.3.2",
-    "react-test-renderer": "^16.3.2",
+    "babel-loader": "^8.0.0-beta.4",
+    "babel-plugin-inline-import": "^2.0.6",
+    "babel-plugin-styled-components": "^1.2.0",
+    "babel-plugin-transform-define": "^1.3.0",
+    "circle-github-bot": "0.4.0",
+    "enzyme": "3.3.0",
+    "enzyme-adapter-react-15": "^1.0.6",
+    "eslint-config-standard": "11.0.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-node": "6.0.1",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-standard": "3.0.1",
+    "install": "^0.12.1",
+    "jest-cli": "22.4.3",
+    "npm": "^6.2.0",
+    "pre-commit": "1.2.2",
+    "react-addons-test-utils": "15.3.2",
+    "react-test-renderer": "16.3.2",
     "standard": "11.0.1"
   },
   "standard": {
@@ -37,16 +46,21 @@
     "build": "next build",
     "start": "NODE_ENV=production next start",
     "lint": "standard",
-    "test": "jest"
+    "test": "NODE_ENV=test jest"
   },
   "pre-commit": [
     "lint",
     "test"
   ],
   "jest": {
+    "testURL": "http://localhost",
     "testPathIgnorePatterns": [
       "/node_modules/",
-      "/.history/"
-    ]
+      "/.history/",
+      "/.next/"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
   }
 }

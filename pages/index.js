@@ -14,7 +14,7 @@ import { Input, TextArea, Button } from '../components/form'
 import { backgroundGradient } from '../components/styles'
 
 const HeroBackground = styled.section`
-  background-image: url('/static/images/bg2.jpg');
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8+f9vPQAJZAN2rlRQVAAAAABJRU5ErkJggg==');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -48,7 +48,7 @@ export default class extends React.Component {
     return {
       works: [{
         title: 'Meu Negócio',
-        image: '../static/images/home-suave.png',
+        image: 'https://futuring.com.br/static/images/home-suave.png',
         description: `
           <p>The <b>Meu Negócio</b> application is an virtual assistant that provides Independent Beauty Consultants of Suave Fragrance the opportunity to create sales tickets, manage inventory and service her customers on the go from their mobile devices.</p>
         `,
@@ -59,7 +59,7 @@ export default class extends React.Component {
         }
       }, {
         title: 'Mini Receitas',
-        image: '../static/images/home-minireceitas.png',
+        image: 'https://futuring.com.br/static/images/home-minireceitas.png',
         description: `
           <p><b>Mini Receitas</b> is an application that allows you to search for recipes through the ingredients that you have at hand. With thousands of possible combinations of filters.</p>
         `,
@@ -69,9 +69,9 @@ export default class extends React.Component {
         }
       }, {
         title: 'Plan Kids',
-        image: '../static/images/home-plankids.png',
+        image: 'https://futuring.com.br/static/images/home-plankids.png',
         description: `
-          <p><b>Plan Kids</b> is an application for parents who wish to develop their children\'s potential through playful play that has been designed using psychopedagogy and coaching.</p>
+          <p><b>Plan Kids</b> is an application for parents who wish to develop their children's potential through playful play that has been designed using psychopedagogy and coaching.</p>
         `,
         tags: ['Ionic', 'Angular', 'Parse Server', 'PouchDB', 'Docker', 'Heroku'],
         stores: {
@@ -80,7 +80,7 @@ export default class extends React.Component {
         }
       }, {
         title: 'Prepara ENEM App',
-        image: '../static/images/home-preparaenem.png',
+        image: 'https://futuring.com.br/static/images/home-preparaenem.png',
         description: `
           <p><b>Prepara ENEM</b> is an application that helps Brazilian high school students to achieve better results on Brazilian national exam through gamification.</p>
         `,
@@ -92,7 +92,7 @@ export default class extends React.Component {
   render () {
     return (
       <div>
-        <HeroBackground>
+        <HeroBackground data-fs-bg='https://futuring.com.br/static/images/bg2.jpg' data-fs-auto-webp='true'>
           <Section fullScreen>
             <Header>
               <Logo />
