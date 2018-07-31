@@ -46,7 +46,7 @@ export default class MyDocument extends Document {
               projectId: '572043a6'
             }
           `}} />
-          <script defer src='https://unpkg.com/filesquash-widget@0.6.0/dist/filesquash.js' />
+          <script defer src='https://unpkg.com/filesquash-widget@0.6.2/dist/filesquash.js' />
         </body>
       </html>
     )
