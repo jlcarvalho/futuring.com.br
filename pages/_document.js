@@ -31,6 +31,9 @@ export default class MyDocument extends Document {
           <meta property='og:image:width' content='1200' />
           <meta property='og:image:height' content='900' />
           {styleTags}
+
+          <link rel='preconnect' href='https://api.filesquash.io' />
+          <link rel='preconnect' href='https://unpkg.com' />
         </Head>
         <body>
           <div className='root'>
