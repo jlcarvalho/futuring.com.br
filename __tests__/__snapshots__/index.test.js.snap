@@ -214,6 +214,7 @@ exports[`With Snapshot Testing App have 3 works 1`] = `
               >
                 <a
                   href="https://itunes.apple.com/us/app/suave-fragrance-meu-negócio/id1225991362"
+                  rel="noopener"
                   target="_blank"
                 >
                   <img
@@ -224,6 +225,7 @@ exports[`With Snapshot Testing App have 3 works 1`] = `
                 </a>
                 <a
                   href="https://play.google.com/store/apps/details?id=br.com.futuring.apps.suave"
+                  rel="noopener"
                   target="_blank"
                 >
                   <img
@@ -303,6 +305,7 @@ exports[`With Snapshot Testing App have 3 works 1`] = `
               >
                 <a
                   href="https://play.google.com/store/apps/details?id=br.com.jeanlucas.apps.microreceitas"
+                  rel="noopener"
                   target="_blank"
                 >
                   <img
@@ -387,6 +390,7 @@ exports[`With Snapshot Testing App have 3 works 1`] = `
               >
                 <a
                   href="https://itunes.apple.com/ca/app/plan-kids/id1147019060"
+                  rel="noopener"
                   target="_blank"
                 >
                   <img
@@ -397,6 +401,7 @@ exports[`With Snapshot Testing App have 3 works 1`] = `
                 </a>
                 <a
                   href="https://play.google.com/store/apps/details?id=br.com.futuring.apps.plankidsapp"
+                  rel="noopener"
                   target="_blank"
                 >
                   <img
