@@ -15,7 +15,7 @@ export default class MyDocument extends Document {
     const styleTags = sheet.getStyleElement()
 
     return (
-      <html>
+      <html lang='en'>
         <Head>
           <title>Futuring</title>
           <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0' />
@@ -30,6 +30,9 @@ export default class MyDocument extends Document {
           <meta property='og:image:type' content='image/png' />
           <meta property='og:image:width' content='1200' />
           <meta property='og:image:height' content='900' />
+
+          <meta name='theme-color' content='#141414' />
+
           {styleTags}
 
           <link rel='preconnect' href='https://api.filesquash.io' />
