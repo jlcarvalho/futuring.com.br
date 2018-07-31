@@ -104,7 +104,7 @@ export default (props) => (
             <Stores {...props}>
               {
                 props.stores.apple && (
-                  <a href={props.stores.apple} target='_blank'>
+                  <a href={props.stores.apple} rel='noopener' target='_blank'>
                     <Badge
                       src='https://futuring.com.br/static/images/app-store-badge.svg'
                       alt='Download on the App Store'
@@ -114,7 +114,7 @@ export default (props) => (
               }
               {
                 props.stores.google && (
-                  <a href={props.stores.google} target='_blank'>
+                  <a href={props.stores.google} rel='noopener' target='_blank'>
                     <Badge
                       data-fs-src='https://futuring.com.br/static/images/google-play-badge.png'
                       data-fs-auto-webp='true'
