@@ -4,7 +4,6 @@ exports[`With Snapshot Testing App have 3 works 1`] = `
 <div>
   <section
     className="pages__HeroBackground-s183zrgj-0 gUQiSa"
-    data-fs-auto-webp="true"
     data-fs-bg="https://futuring.com.br/static/images/bg2.jpg"
   >
     <div
@@ -154,8 +153,7 @@ exports[`With Snapshot Testing App have 3 works 1`] = `
               <img
                 alt="Meu Negócio"
                 className="work__MockUp-s120issw-2 bfbAZN"
-                data-fs-auto-webp="true"
-                data-fs-src="../static/images/home-suave.png"
+                src="../static/images/home-suave.png"
               />
             </div>
             <div>
@@ -231,8 +229,7 @@ exports[`With Snapshot Testing App have 3 works 1`] = `
                   <img
                     alt="Get it on Google Play"
                     className="work__Badge-s120issw-7 bXxmRb"
-                    data-fs-auto-webp="true"
-                    data-fs-src="https://futuring.com.br/static/images/google-play-badge.png"
+                    src="https://futuring.com.br/static/images/google-play-badge.png"
                   />
                 </a>
               </div>
@@ -250,8 +247,7 @@ exports[`With Snapshot Testing App have 3 works 1`] = `
               <img
                 alt="Mini Receitas"
                 className="work__MockUp-s120issw-2 bfbAZN"
-                data-fs-auto-webp="true"
-                data-fs-src="../static/images/home-minireceitas.png"
+                src="../static/images/home-minireceitas.png"
               />
             </div>
             <div>
@@ -311,8 +307,7 @@ exports[`With Snapshot Testing App have 3 works 1`] = `
                   <img
                     alt="Get it on Google Play"
                     className="work__Badge-s120issw-7 bXxmRb"
-                    data-fs-auto-webp="true"
-                    data-fs-src="https://futuring.com.br/static/images/google-play-badge.png"
+                    src="https://futuring.com.br/static/images/google-play-badge.png"
                   />
                 </a>
               </div>
@@ -330,8 +325,7 @@ exports[`With Snapshot Testing App have 3 works 1`] = `
               <img
                 alt="Plan Kids"
                 className="work__MockUp-s120issw-2 bfbAZN"
-                data-fs-auto-webp="true"
-                data-fs-src="../static/images/home-plankids.png"
+                src="../static/images/home-plankids.png"
               />
             </div>
             <div>
@@ -407,8 +401,7 @@ exports[`With Snapshot Testing App have 3 works 1`] = `
                   <img
                     alt="Get it on Google Play"
                     className="work__Badge-s120issw-7 bXxmRb"
-                    data-fs-auto-webp="true"
-                    data-fs-src="https://futuring.com.br/static/images/google-play-badge.png"
+                    src="https://futuring.com.br/static/images/google-play-badge.png"
                   />
                 </a>
               </div>

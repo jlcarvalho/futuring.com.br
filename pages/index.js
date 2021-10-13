@@ -14,7 +14,7 @@ import { Input, TextArea, Button } from '../components/form'
 import { backgroundGradient } from '../components/styles'
 
 const HeroBackground = styled.section`
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8+f9vPQAJZAN2rlRQVAAAAABJRU5ErkJggg==');
+  background-image: url('/static/images/bg2.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -26,8 +26,6 @@ const WhiteBackground = styled.section`
 `
 
 const Footer = styled.footer`
-  margin-top: 32px;
-
   p {
     margin: 0;
     padding: 16px 32px;
@@ -48,7 +46,7 @@ export default class extends React.Component {
     return {
       works: [{
         title: 'Meu Negócio',
-        image: 'https://futuring.com.br/static/images/home-suave.png',
+        image: '/static/images/home-suave.png',
         description: `
           <p>The <b>Meu Negócio</b> application is an virtual assistant that provides Independent Beauty Consultants of Suave Fragrance the opportunity to create sales tickets, manage inventory and service her customers on the go from their mobile devices.</p>
         `,
@@ -59,7 +57,7 @@ export default class extends React.Component {
         }
       }, {
         title: 'Mini Receitas',
-        image: 'https://futuring.com.br/static/images/home-minireceitas.png',
+        image: '/static/images/home-minireceitas.png',
         description: `
           <p><b>Mini Receitas</b> is an application that allows you to search for recipes through the ingredients that you have at hand. With thousands of possible combinations of filters.</p>
         `,
@@ -69,7 +67,7 @@ export default class extends React.Component {
         }
       }, {
         title: 'Plan Kids',
-        image: 'https://futuring.com.br/static/images/home-plankids.png',
+        image: '/static/images/home-plankids.png',
         description: `
           <p><b>Plan Kids</b> is an application for parents who wish to develop their children's potential through playful play that has been designed using psychopedagogy and coaching.</p>
         `,
@@ -80,7 +78,7 @@ export default class extends React.Component {
         }
       }, {
         title: 'Prepara ENEM App',
-        image: 'https://futuring.com.br/static/images/home-preparaenem.png',
+        image: '/static/images/home-preparaenem.png',
         description: `
           <p><b>Prepara ENEM</b> is an application that helps Brazilian high school students to achieve better results on Brazilian national exam through gamification.</p>
         `,
@@ -92,7 +90,7 @@ export default class extends React.Component {
   render () {
     return (
       <div>
-        <HeroBackground data-fs-bg='https://futuring.com.br/static/images/bg2.jpg' data-fs-auto-webp='true'>
+        <HeroBackground>
           <Section fullScreen>
             <Header>
               <Logo />
@@ -101,33 +99,25 @@ export default class extends React.Component {
 
             <Main>
               <HugeText>
-                We deliver digital <GradientText>experiences</GradientText>.
+                Nós entregamos <GradientText>experiências digitais</GradientText>.
               </HugeText>
             </Main>
           </Section>
         </HeroBackground>
         <WhiteBackground>
-          <Section padding id='work'>
+          <Section padding fullScreen id='hire'>
             <Container small>
-              <h2>Work</h2>
-              {
-                this.props.works.map((work, key) => <Work className='work' key={key} {...work} rtl={!!(key % 2)} />)
-              }
+              <h2>Contato</h2>
+              <HR />
+              <form action='https://formsquash.io/f/SPC9HcXT45IEMlhMeY1Y' method='POST'>
+                <Input required type='text' name='name' id='name' placeholder='Nome' />
+                <Input required type='email' name='email' id='email' placeholder='Email' />
+                <TextArea required name='project' id='project' placeholder='Conte-nos sobre o seu projeto!' />
+                <Button type='submit'>Enviar</Button>
+              </form>
             </Container>
           </Section>
         </WhiteBackground>
-        <Section padding fullScreen id='hire'>
-          <Container small>
-            <h2>Hire Us</h2>
-            <HR />
-            <form action='https://formsquash.io/f/SPC9HcXT45IEMlhMeY1Y' method='POST'>
-              <Input required type='text' name='name' id='name' placeholder='Name' />
-              <Input required type='email' name='email' id='email' placeholder='Email' />
-              <TextArea required name='project' id='project' placeholder='Tell us about your awesome project!' />
-              <Button type='submit'>Request a quote</Button>
-            </form>
-          </Container>
-        </Section>
         <Footer>
           <Container>
             <p>Copyright © Futuring 2017</p>

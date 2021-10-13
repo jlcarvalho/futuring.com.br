@@ -9,9 +9,9 @@ const InputWrapper = styled.div`
   > textarea {
     background: transparent;
     border: 0;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #333;
     box-shadow: none;
-    color: white;
+    color: #333;
     font-size: 1.6rem;
     margin: 8px 0;
     outline: none;
@@ -41,10 +41,10 @@ export const TextArea = (props) => (
 )
 
 export const Button = styled.button`
-  background: white;
+  background: #333;
   border: none;
   border-radius: 2px;
-  color: black;
+  color: white;
   cursor: pointer;
   display: block;
   font-size: 1.6rem;
