@@ -105,7 +105,7 @@ export default class extends React.Component {
           </Section>
         </HeroBackground>
         <WhiteBackground>
-          <Section padding fullScreen id='hire'>
+          <Section padding fullScreen id='contact'>
             <Container small>
               <h2>Contato</h2>
               <HR />

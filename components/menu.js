@@ -34,7 +34,7 @@ export default class extends React.Component {
     return (
       <Menu {...props}>
         <ul>
-          <li><Link onClick={() => this.handleClick('#hire')}>Hire Us</Link></li>
+          <li><Link onClick={() => this.handleClick('#contact')}>Contact</Link></li>
         </ul>
       </Menu>
     )
